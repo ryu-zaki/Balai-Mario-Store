@@ -1,0 +1,41 @@
+.member_date {
+    font-size: .7rem;
+}
+
+.circular_bg {
+    width: 45%;
+}
+
+.circular_bg.delivery {
+    width: 47%;
+}
+
+@media (min-width: 620px) {
+    .member_date {
+        font-size: .5rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 970px) {
+
+    :root {
+        --settingPageWidth: 57em;
+    }
+
+    .setting_page {
+        max-width: var(--settingPageWidth);
+    }
+}
+
+@media (min-width: 1180px) {
+    :root {
+        --settingPageWidth: 70em;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --settingPageWidth: 75em;
+    }
+}

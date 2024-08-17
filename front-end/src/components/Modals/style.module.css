@@ -1,0 +1,51 @@
+:root {
+   --emailGetterWidth: 27em;
+}
+
+.savedModal::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   width: 5%;
+   background-color: #E27F2A;
+}
+
+.savedModal {
+   opacity: 0;
+   transform: translateX(-50%);
+   animation: messModal 3s forwards;
+}
+
+
+@keyframes messModal {
+
+   0% {
+      opacity: 0;
+      transform: translateX(-50%);
+   }
+
+   20%, 80% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateX(-50%);
+   }
+   
+}
+
+@media (min-width: 440px) {
+   .email_getter_modal {
+      width: var(--emailGetterWidth);
+   }
+}
+
+@media (min-width: 1180px) {
+   :root {
+      --emailGetterWidth: 30em;
+   }
+}

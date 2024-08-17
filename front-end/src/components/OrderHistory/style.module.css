@@ -1,0 +1,86 @@
+.status_ball {
+    position: relative;
+    width: 1.3em;
+    background-color: transparent;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #7ac142;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.status_ball::before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    width: 70%;
+    aspect-ratio: 1;
+    background-color: #7ac142;
+}
+
+.status_ball.pending {
+    border-color: #c46e24;
+}
+
+.status_ball.pending::before {
+    background-color: #c46e24;
+}
+
+.status_ball.pending ~ p {
+    color: #c46e24;
+}
+
+.order_nav > * {
+    position: relative;
+    cursor: pointer;
+}
+
+.remove_span span {
+  display: none !important;
+}
+
+@media (min-width: 970px) {
+
+    :root {
+        --orderModalWidth: 35em;
+    }
+
+    nav.order_nav {
+        box-shadow: none;
+    }
+
+    .order_nav > *:hover {
+        color: #c46e24;
+    }
+    
+    .order_nav > *::before {
+        content: '';
+    
+        position: absolute;
+        bottom: -.3em;
+    
+        width: 100%;
+        height: 2px;
+        background-color: #c46e24;
+        scale: 0 1;
+    }
+
+    .order_nav > *.active {
+        color: #c46e24; 
+        font-weight: 600;
+    }
+    
+    .order_nav > *.active::before {
+        scale: 1;
+    }
+
+
+    /* Modal */
+    .order_modal {
+       width: var(--orderModalWidth);
+    }
+}
+

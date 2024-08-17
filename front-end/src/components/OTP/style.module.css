@@ -1,0 +1,39 @@
+
+
+.beat_anim {
+    animation: beat 1s ease-out infinite;
+}
+
+
+@keyframes backState {
+    to {
+        scale: 1;
+        translate: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes beat {
+    0% {
+        opacity: 1;
+        scale: 0;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+}
+
+@media (min-width: 970px) {
+    .otp_modal {
+       max-width: 30em;
+    }
+
+    .send_otp:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}

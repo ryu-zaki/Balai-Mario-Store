@@ -1,0 +1,22 @@
+.questions_list {
+    overflow-y: auto;
+    height: 20em;
+}
+
+
+@media (min-width: 768px) {
+
+    .card {
+        width: 38em;
+    }
+}
+
+@media (min-width: 1180px) {
+    .questions_list {
+        height: 22em;
+    }
+
+    .card {
+        width: 42em;
+    }
+}
