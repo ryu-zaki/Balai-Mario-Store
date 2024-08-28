@@ -613,6 +613,21 @@
 }
 
 
+/* Admin Page */
+.admin_name.active > div {
+    translate: 0 -50%;
+}
+
+.header-text {
+    translate: 2em 0;
+    opacity: 0;
+}
+
+.order-box {
+    translate: 0 2em;
+    opacity: 0;
+}
+
 @media (min-width: 768px) {
     .inv-main-desc > :is(h1, div:nth-of-type(1), p, div:nth-of-type(2)) {
         translate: -2em 0;

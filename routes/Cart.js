@@ -7,6 +7,7 @@ const {getInfoFromToken, addCartItem, validateCookie} = require('./middlewares')
 const User = require('../schemas/User');
 
 router.post('/add-dish', validateCookie, getInfoFromToken, addCartItem, (req, res) => {
+
     res.json({accessToken: req.accessToken, newProduct: req.newProduct});
 })
 

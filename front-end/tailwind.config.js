@@ -10,7 +10,7 @@ module.exports = {
       "xxs": "375px",
 
       "xs": "440px",
-
+      
       'sm': '620px',
       // => @media (min-width: 640px) { ... }
 
@@ -36,14 +36,18 @@ module.exports = {
       "lightRed": 'rgba(244,104,108, .1)',
       "brown": "#90591a",
       "lightGray": "#bbb",
+      "lightGreen": "#C0FDE0",
       "lighterGray": "#f0f0f0",
       "gray": "#555",
       "green": "#7ac142",
       "lightOrange": "#c46e24",
-      
-      "lighterOrange": "#F3E2D3",
       "pureWhite": "#fff",
       "transparent": "rgba(0,0,0,0.0)",
+
+      /* Lighter Colors */
+      "lighterGreen": "#E1FFEA",
+      "lighterRed": "#FBD9DA",
+      "lighterOrange": "#F3E2D3",
 
       /* Overlay */
       "darkOverlay": "rgba(46,37,23, .7)",

@@ -3,6 +3,7 @@
 :root {
     /* Colors */
     --lightOrange: #c46e24;
+    --lighterOrange: #F3E2D3;
     --darkBrown: #2e2517;
     --brown: #90591a;
     --pureWhitw: #fff;
@@ -260,7 +261,29 @@ body {
    border-left: 10px solid transparent;
    border-top: 15px solid #fff;
    border-right: 10px solid transparent;
+}
 
+.triangle.orange {
+    border-top: 15px solid var(--lightOrange);
+    position: absolute;
+    opacity: .6;
+    scale: 0;
+}
+
+.triangle.orange:nth-of-type(1) {
+    rotate: 120deg;
+}
+
+.triangle.orange:nth-of-type(2) {
+    rotate: 80deg;
+    left: 80%;
+    bottom: 10%;
+}
+
+
+.triangle.orange:nth-of-type(3) {
+    bottom: 13%;
+    rotate: 50deg;
 }
 
 .offers-min-height {
@@ -1418,6 +1441,20 @@ input[type="radio"]:checked ~ .custom-radio::before {
         max-width: 34em;
         border-radius: 1.3em;
     }
+
+
+    .triangle.orange:nth-of-type(1) {
+       left: 10%;
+    }
+    
+    .triangle.orange:nth-of-type(2) {
+       bottom: 20%;
+    }
+    
+    
+    .triangle.orange:nth-of-type(3) {
+      bottom: 15%;
+    }
 }
 
 @media (min-width: 970px) {
@@ -1625,6 +1662,21 @@ input[type="radio"]:checked ~ .custom-radio::before {
     .receipt-card > section:nth-child(2) {
         width: 56%;
     }
+
+    /* Triangles */
+    .triangle.orange:nth-of-type(1) {
+        left: 27%;
+     }
+     
+     .triangle.orange:nth-of-type(2) {
+        bottom: 14%;
+        left: 50%;
+     }
+     
+     
+     .triangle.orange:nth-of-type(3) {
+       bottom: 10%;
+     }
     
 }
 
@@ -1850,6 +1902,13 @@ input[type="radio"]:checked ~ .custom-radio::before {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+
+     /* Triangles */
+     .triangle.orange:nth-of-type(1) {
+        left: auto;
+        right: 50%;
+     }
+    
 }
 
 @media (min-width: 1280px) {
@@ -1901,6 +1960,20 @@ input[type="radio"]:checked ~ .custom-radio::before {
     .individual-category-container .featured-product {
         width: 32%;
     }
+
+
+     /* Triangles */
+     
+     .triangle.orange:nth-of-type(2) {
+        bottom: 10%;
+        left: 60%;
+     }
+     
+     
+     .triangle.orange:nth-of-type(3) {
+       bottom: 15%;
+       right: 65%;
+     }
 }
 
 @media (min-width: 1580px) {

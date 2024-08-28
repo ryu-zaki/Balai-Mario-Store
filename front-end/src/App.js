@@ -47,6 +47,7 @@ import EmailGetter from './components/Modals/EmailGetter.jsx';
 import PageNotFound from './components/PageNotFound.jsx';
 
 import MainPage from './admin panel/MainPage.jsx';
+import AnimationGSP_Admin from './admin panel/AnimationGSP_Admin.jsx';
 function App() {
   const {categories} = useAvailableRecipes();
   const {totalProducts, singleOrder} = useCart();
@@ -193,11 +194,10 @@ function App() {
   }, []);
   
   return (
-    <>
-       <MainPage />
-       <Footer />
-    </>
-   
+    <AnimationGSP_Admin>
+      <MainPage />
+      <Footer />
+    </AnimationGSP_Admin>
   )
 
   return (
