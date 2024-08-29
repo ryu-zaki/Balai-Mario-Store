@@ -1,14 +1,19 @@
 import React from 'react'
 import gsap from 'gsap';
-import TextPlugin from 'gsap/TextPlugin';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLocation } from 'react-router';
 
 function AnimationGSP_Admin({children}) {
    
   const {pathname} = useLocation();
+  gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
+    window.scrollTo({
+      top: 0
+    })
 
+    
     const defaults = {
         duration: .8,
         stagger: .2,
@@ -33,7 +38,37 @@ function AnimationGSP_Admin({children}) {
       scale: 1,
       delay: 1
     })
+  
+    const subTextDefaults = (className) => {
 
+      return (
+        {
+      scrollTrigger: className,
+      delay: .2,
+      translateX: 0,
+      opacity: 1,
+      duration: .7
+        }
+      )
+      
+    }
+    gsap.to('.sub_text1', {
+     ...subTextDefaults(".sub_text1"),
+     delay: .2
+    })
+
+    gsap.to('.sub_text2', {
+      ...subTextDefaults(".sub_text2"),
+      delay: .4
+    })
+
+    gsap.to('.row_data', {
+      scrollTrigger: ".row_data",
+      delay: .2,
+      translateX: 0,
+      stagger: .2,
+      opacity: 1
+    })
 
 
   }, [pathname]);

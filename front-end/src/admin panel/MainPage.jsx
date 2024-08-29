@@ -13,7 +13,7 @@ function MainPage() {
   return (
     <>
     {/* Mobile Top Navigation */}
-    <div className='flex text-dark z-10 bg-pureWhite justify-between sticky top-0 dark-shadow items-center py-4 px-5 xl:hidden'>
+    <div className='flex  text-dark z-50 bg-pureWhite justify-between sticky top-0 dark-shadow items-center py-4 px-5 xl:hidden'>
         <h3 className='font-semibold'>Balai Mario</h3>
         
         <div className={`${style.mobile_menu} relative`}>

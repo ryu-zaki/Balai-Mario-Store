@@ -13,11 +13,11 @@ function RegisteredPreview() {
   return (
     <div className={`${ style.upper_line } relative md:pt-5 lg:pt-7`}>
       <div className='flex flex-col gap-5 mt-2 md:flex-row md:items-start md:justify-between md:gap-10 xl:items-center'>
-          <div>
+          <div className='sub_text1'>
              <h2 className='text-2xl font-semibold md:text-3xl xl:text-3xl'>Registered Accounts</h2>
              <div className='text-lightOrange text-sm font-semibold mt-5'>
-              <span>Total of</span>&nbsp;&nbsp;
-              <span className='bg-lighterOrange px-3 py-2 rounded-full'>200 active users</span>
+              <span className='sub_text1 opacity-0 inline-block -translate-x-10'>Total of</span>&nbsp;&nbsp;
+              <span className='bg-lighterOrange opacity-0 inline-block -translate-x-10 px-3 py-2 rounded-full sub_text2'>200 active users</span>
              </div>
           </div>
 
@@ -67,7 +67,7 @@ const ControlButton = ({imgSrc, label}) => {
 const RowData = () => {
 
     return (
-        <div className='relative flex text-sm items-center justify-between border rounded-lg p-2 border-lightGray gap-3 py-3 sm:px-5 sm:pr-8 lg:grid lg:grid-cols-11'>
+        <div className='relative -translate-x-10 opacity-0 row_data flex text-sm items-center justify-between border rounded-lg p-2 border-lightGray gap-3 py-3 sm:px-5 sm:pr-8 lg:grid lg:grid-cols-11'>
             <div className='flex gap-3 items-center sm:gap-5 lg:col-span-3'>
                 <div className='relative'>
                   <img className='w-10 rounded-full sm:w-14 md:w-10' src={kenzoIcon} alt='' />
