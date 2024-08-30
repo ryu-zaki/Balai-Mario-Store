@@ -42,8 +42,8 @@ const CategoryBox = ({color, category, itemsNum, imgSrc, iconBgColor}) => {
 
 
     return (
-        <div className='flex items-center border border-gray rounded-lg p-5 gap-5 sm:flex-col sm:gap-7 sm:w-full md:flex-row md:gap-5 lg:w-fit lg:px-8 lg:pr-10 xl:px-5 xl:pr-8'>
-            <div className={`${iconBgColor} p-3 rounded-full sm:p-5 md:p-3`}>
+        <div className='register_box -translate-x-10 opacity-0 flex items-center border border-gray rounded-lg p-5 gap-5 sm:flex-col sm:gap-7 sm:w-full md:flex-row md:gap-5 lg:w-fit lg:px-8 lg:pr-10 xl:px-5 xl:pr-8'>
+            <div className={`register_icon opacity-0 -translate-y-10 ${iconBgColor} p-3 rounded-full sm:p-5 md:p-3`}>
               <img width={32} src={imgSrc} alt='' />
             </div>
             <div>

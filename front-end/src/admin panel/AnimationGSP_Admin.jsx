@@ -43,7 +43,10 @@ function AnimationGSP_Admin({children}) {
 
       return (
         {
-      scrollTrigger: className,
+          
+      scrollTrigger: {
+        trigger: className
+      },
       delay: .2,
       translateX: 0,
       opacity: 1,
@@ -68,6 +71,26 @@ function AnimationGSP_Admin({children}) {
       translateX: 0,
       stagger: .2,
       opacity: 1
+    });
+
+     
+    /* Registered Boxes */
+    const registeredDefaults = {
+      duration: .6,
+      translateX: 0,
+      translateY: 0,
+      scale: 1,
+      opacity: 1,
+      stagger: .2
+    }
+
+    gsap.to('.register_box', {
+      ...registeredDefaults
+    });
+
+    gsap.to('.register_icon', {
+      ...registeredDefaults,
+      delay: .2,
     })
 
 
