@@ -6,11 +6,20 @@ import filterIcon from '../../assets/admin_panel/filter-dark.png';
 import listIcon from '../../assets/admin_panel/list-dark.png';
 import chevron from '../../assets/materials/chevron-left.png';
 import {useLocation} from 'react-router';
+import UserModal from './UserModal';
 
 
 function RegisteredPreview() {
-    
+ 
+  const [userModalVisible, setUserModalVisible] = React.useState(false);
+
   return (
+    <>
+    {
+      userModalVisible && (<UserModal setUserModalVisible={setUserModalVisible}/>)
+    }
+    
+
     <div className={`${ style.upper_line } relative md:pt-5 lg:pt-7`}>
       <div className='flex flex-col gap-5 mt-2 md:flex-row md:items-start md:justify-between md:gap-10 xl:items-center'>
           <div className='sub_text1'>
@@ -38,7 +47,7 @@ function RegisteredPreview() {
           <span className='col-span-2'># of orders</span>
           <span>Details</span>
         </div>
-        <RowData />
+        <RowData setUserModalVisible={setUserModalVisible} />
         <RowData />
         <RowData />
         <RowData />
@@ -50,6 +59,7 @@ function RegisteredPreview() {
 
 
     </div>
+    </>
   )
 }
 
@@ -64,7 +74,12 @@ const ControlButton = ({imgSrc, label}) => {
 }
 
 
-const RowData = () => {
+const RowData = ({setUserModalVisible}) => {
+  
+    const handleViewModal = () => {
+      setUserModalVisible(true);
+
+    }
 
     return (
         <div className='relative -translate-x-10 opacity-0 row_data flex text-sm items-center justify-between border rounded-lg p-2 border-lightGray gap-3 py-3 sm:px-5 sm:pr-8 lg:grid lg:grid-cols-11'>
@@ -79,7 +94,7 @@ const RowData = () => {
             <p className='hidden truncate font-semibold lg:inline-block lg:col-span-3'>kenzo_shenel09876@gmail.com</p>
             <span className='hidden col-span-2 mx-auto px-5 bg-lightGreen text-green rounded-full text-center py-1 font-semibold lg:inline-block'>Active</span>
             <span className='absolute text-xs py-1 px-2 rounded-md top-0 right-3 -translate-y-1/2 bg-lighterOrange text-lightOrange font-semibold sm:text-sm sm:px-4 lg:relative lg:translate-y-0 lg:bg-transparent lg:text-dark lg:whitespace-nowrap lg:col-span-2'>24 orders</span>
-            <img className='w-5 sm:w-7 md:w-5' src={detailsIcon} alt='' />
+            <img onClick={handleViewModal} className='w-5 cursor-pointer sm:w-7 md:w-5' src={detailsIcon} alt='' />
         </div>
     )
 
