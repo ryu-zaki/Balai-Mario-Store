@@ -31,12 +31,12 @@ function UserModal({setUserModalVisible}) {
 
 const ShortInfo = ({setUserModalVisible, setViewFull}) => {
     return (
-        <div className={`${style["short_info--card"]} flex flex-col gap-10 fixed w-11/12 rounded-xl overflow-hidden top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-pureWhite z-50 pb-5 lg:gap-14`}>
+        <div className={`${style["short_info--card"]} ${style["modal_card"]} modal_card flex flex-col gap-10 fixed w-11/12 rounded-xl  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-pureWhite z-50 pb-5 lg:gap-14`}>
           <div onClick={() => setUserModalVisible(false)} className='absolute z-10 p-1 top-2 right-2 cursor-pointer bg-pureWhite rounded-full lg:top-3 lg:right-3'><img width={15} src={crossIcon} alt='' /></div>
           
-          <div className='flex justify-center bg-lightGray relative h-32 mb-8 border-pureWhite border-2 rounded-tl-2xl rounded-tr-2xl lg:border-4 lg:h-40'>
+          <div className={`${style.full_cover} flex justify-center bg-lightGray relative h-32 mb-8 border-pureWhite border-2 rounded-tl-2xl rounded-tr-2xl lg:border-4 lg:h-40`}>
 
-            <div className={`${style.user_profile} w-fit absolute bottom-0 translate-y-1/2`}>
+            <div className={`${style.user_profile} w-fit full_profile absolute bottom-0`}>
               <img className='w-40 aspect-1 rounded-full border-2 border-pureWhite lg:w-36 lg:border-4' src={userIcon} alt='' />
             </div>
              

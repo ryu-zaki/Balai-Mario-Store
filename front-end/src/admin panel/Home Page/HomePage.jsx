@@ -1,10 +1,12 @@
 import React from 'react'
 import chevronRight from '../../assets/materials/chevron-right.png';
 import kenzoIcon from '../../assets/icons/kenzo.jpg';
-import RegisteredPreview from './RegisteredPreview';
 import style from '../style.module.css';
 import { useMatchMedia } from '../../custom_hooks/useMatchMedia';
 import { useLocation } from 'react-router';
+import InfoListPreview from './InfoListPreview';
+import { categoryBoxes, PageTable, userAccounts } from '../Registered Page/RegisteredPage';
+import UserModal from './UserModal';
 
 function HomePage() {
 
@@ -20,6 +22,8 @@ function HomePage() {
     return () => clearTimeout(timeout);
 
   }, [pathname]);
+
+  const [userModalVisible, setUserModalVisible] = React.useState(false);
 
   return (
     <div>
@@ -80,8 +84,19 @@ function HomePage() {
            
          </div>
       </div>
+
+
       {/* Registered Accounts */}
-      <RegisteredPreview />
+      <InfoListPreview 
+        listName={"Registered Accounts"}
+        categoryBoxes={categoryBoxes}
+        items={userAccounts}
+        totalList={200}
+
+        modalVisible={userModalVisible}
+        PageTable={PageTable}
+        InfoModal={<UserModal setUserModalVisible={setUserModalVisible} />}
+      />
     </div>
   )
 }

@@ -73,6 +73,7 @@ function AnimationGSP_Admin({children}) {
       opacity: 1
     });
 
+    if (pathname === "/users") {
      
     /* Registered Boxes */
     const registeredDefaults = {
@@ -91,9 +92,9 @@ function AnimationGSP_Admin({children}) {
     gsap.to('.register_icon', {
       ...registeredDefaults,
       delay: .2,
-    })
+    });
 
-
+  }
   }, [pathname]);
 
   return (

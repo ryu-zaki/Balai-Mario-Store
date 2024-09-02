@@ -55,6 +55,51 @@
     right: 8px;
 }
 
+.user_profile {
+    translate: 0 100%;
+    animation: revealIcon 1.5s .2s forwards;
+}
+
+.full_cover {
+    overflow: hidden;
+    animation: fullCover 0s .8s forwards;
+}
+
+.user_profile img {
+    animation: addShadow .6s 1s forwards;
+}
+
+.modal_card {
+    scale: 0;
+    animation: stateBack .8s forwards;
+}
+
+@keyframes addShadow {
+
+    to {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+}
+
+@keyframes fullCover {
+    to {
+        overflow: visible;
+    }
+}
+
+@keyframes revealIcon {
+
+  50% {
+    translate: 0 0%;
+  }
+
+  100% {
+    translate: 0 50%;
+  }
+    
+}
+
 @media (min-width: 970px) {
     :root {
         --shortInfoWidth: 25em;
