@@ -39,6 +39,7 @@ module.exports = {
       "lightGreen": "#C0FDE0",
       "lighterGray": "#f0f0f0",
       "gray": "#555",
+      "pitch": "#EEA88D",
       "green": "#7ac142",
       "lightOrange": "#c46e24",
       "pureWhite": "#fff",
@@ -48,6 +49,7 @@ module.exports = {
       "lighterGreen": "#E1FFEA",
       "lighterRed": "#FBD9DA",
       "lighterOrange": "#F3E2D3",
+      "lighterPitch": "#FFD6C7",
 
       /* Overlay */
       "darkOverlay": "rgba(46,37,23, .7)",

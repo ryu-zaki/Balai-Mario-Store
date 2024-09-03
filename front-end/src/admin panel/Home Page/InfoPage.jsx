@@ -46,7 +46,7 @@ const CategoryBox = ({color, category, itemsNum, imgSrc, iconBgColor}) => {
               <img width={32} src={imgSrc} alt='' />
             </div>
             <div>
-                <h3 className={`text-${color} text-xl mb-3 font-semibold sm:text-lg md:text-base`}>{category} Users</h3>
+                <h3 className={`text-${color} text-xl mb-3 font-semibold sm:text-lg md:text-base`}>{category}</h3>
                 <span className={`bg-${color} text-sm text-pureWhite rounded-full py-2 px-4`}>{itemsNum} Accounts</span>
             </div>
         </div>

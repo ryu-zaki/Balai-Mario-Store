@@ -73,7 +73,7 @@ function AnimationGSP_Admin({children}) {
       opacity: 1
     });
 
-    if (pathname === "/users") {
+    if (pathname === "/users" || pathname === "/orders") {
      
     /* Registered Boxes */
     const registeredDefaults = {

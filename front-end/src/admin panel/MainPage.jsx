@@ -5,10 +5,12 @@ import HomePage from './Home Page/HomePage'
 import style from './style.module.css';
 import { Route, Routes } from 'react-router';
 import RegisteredPage from './Registered Page/RegisteredPage.jsx';
+import OrderPage from './Order Page/OrderPage.jsx';
 
 function MainPage() {
 
   const [sideNavVisible, setSideNavVisible] = React.useState(false);
+
 
   return (
     <>
@@ -35,12 +37,17 @@ function MainPage() {
 
         <Routes>
           <Route path='/' element={
-            <HomePage />
+            <HomePage/>
           } />
 
           <Route path='/users' element={
             <RegisteredPage />
           } />
+
+          <Route path='/orders' element={
+            <OrderPage />  
+        }
+            />
 
         </Routes>
         

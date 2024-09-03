@@ -5,19 +5,9 @@ import orangeImg from '../../assets/materials/user-orange.png'
 import InfoPage from '../Home Page/InfoPage';
 import detailsIcon from '../../assets/materials/action-btn.png';
 import kenzoIcon from '../../assets/icons/kenzo.jpg';
+import { Box } from '../Functionalities';
 import UserModal from '../Home Page/UserModal';
 
-const Box = (color, category, itemsNum, imgSrc, iconBgColor) => {
-  return (
-    {color, category, itemsNum, imgSrc, iconBgColor}
-  )
-}
-
-export const categoryBoxes = [
-  Box("green", "Active", 45, greenImg, "bg-lighterGreen"),
-  Box("lightOrange", "Active", 45, orangeImg, "bg-lighterOrange"),
-  Box("red", "Active", 45, redImg, "bg-lighterRed"),
-]
 
 const User = (name, email_account, status, num_of_orders, details) => {
   return ({name, email_account, status, num_of_orders, details})
@@ -79,6 +69,13 @@ export const PageTable = ({list}) => {
   </div>
   )
 }
+
+export const categoryBoxes = [
+  Box("green", "Active", 45, greenImg, "bg-lighterGreen"),
+  Box("lightOrange", "Active", 45, orangeImg, "bg-lighterOrange"),
+  Box("red", "Active", 45, redImg, "bg-lighterRed"),
+];
+
 
 function RegisteredPage() {
 

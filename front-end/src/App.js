@@ -48,6 +48,7 @@ import PageNotFound from './components/PageNotFound.jsx';
 
 import MainPage from './admin panel/MainPage.jsx';
 import AnimationGSP_Admin from './admin panel/AnimationGSP_Admin.jsx';
+
 function App() {
   const {categories} = useAvailableRecipes();
   const {totalProducts, singleOrder} = useCart();
