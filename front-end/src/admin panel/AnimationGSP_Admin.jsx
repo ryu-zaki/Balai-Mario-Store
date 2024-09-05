@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLocation } from 'react-router';
 
+const ContextComponent = React.createContext(null);
+
 function AnimationGSP_Admin({children}) {
    
   const {pathname} = useLocation();
+  const rowDataRef = useRef(null);
+  const [triggerAnim, setTriggerAnim] = React.useState(false);
+
   gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
     window.scrollTo({
       top: 0
     })
-
+   
+    console.log(rowDataRef)
     
     const defaults = {
         duration: .8,
@@ -66,7 +72,7 @@ function AnimationGSP_Admin({children}) {
     })
 
     gsap.to('.row_data', {
-      scrollTrigger: ".row_data",
+      scrollTrigger: '.row_data',
       delay: .2,
       translateX: 0,
       stagger: .2,
@@ -95,11 +101,21 @@ function AnimationGSP_Admin({children}) {
     });
 
   }
-  }, [pathname]);
+  }, [pathname, triggerAnim]);
 
   return (
+    <ContextComponent.Provider value={{setTriggerAnim}}>
+{
    children
+}
+    </ContextComponent.Provider>
+  
   )
+}
+
+export const useAdminAnim = () => {
+  
+  return useContext(ContextComponent);
 }
 
 export default AnimationGSP_Admin

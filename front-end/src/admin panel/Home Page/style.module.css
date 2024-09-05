@@ -45,6 +45,20 @@
     max-width: var(--shortInfoWidth);
 }
 
+.short_info--card > div:last-child > div {
+    translate: 0 -50%;
+    opacity: 0;
+    animation: stateBack .8s forwards;
+}
+
+.short_info--card > div:last-child > div:first-child {
+    animation-delay: .4s;
+}
+
+.short_info--card > div:last-child > div:last-child {
+    animation-delay: .8s;
+}
+
 .full_info--card {
     max-width: var(--fullInfoWidth);
 }
@@ -55,14 +69,52 @@
     right: 8px;
 }
 
+.full_info--card > div:nth-child(2) > div:nth-child(2) {
+    translate: 0 -100%;
+    opacity: 0;
+    animation: stateBack .7s .3s forwards;
+}
+
+.full_info--card > div:last-child > div {
+    translate: -50%;
+    opacity: 0;
+    animation: stateBack .8s forwards;
+}
+
+.full_info--card > div:last-child > div:first-child {
+    animation-delay: .2s;
+}
+
+.full_info--card > div:last-child > div:last-child {
+    animation-delay: .4s;
+}
+
+
 .user_profile {
     translate: 0 100%;
-    animation: revealIcon 1.5s .2s forwards;
+    animation: revealIcon 1.2s 0s forwards;
+}
+
+.user_profile--full_cover {
+    opacity: 0;
+    translate: 10em 50%;
+    animation: profileSlide .7s forwards;
+}
+
+
+
+@keyframes profileSlide {
+
+    to {
+        translate: 0 50%;
+        opacity: 1;
+    }
+    
 }
 
 .full_cover {
     overflow: hidden;
-    animation: fullCover 0s .8s forwards;
+    animation: fullCover 0s .5s forwards;
 }
 
 .user_profile img {
@@ -70,8 +122,21 @@
 }
 
 .modal_card {
-    scale: 0;
-    animation: stateBack .8s forwards;
+    transform-origin: center;
+    translate: -50% -50%;
+    scale: .9;
+    margin-inline: auto;
+    
+    opacity: 0;
+    animation: modalCard .2s forwards;
+}
+
+@keyframes modalCard {
+
+    to {
+        scale: 1 1;
+        opacity: 1;
+    }
 }
 
 @keyframes addShadow {

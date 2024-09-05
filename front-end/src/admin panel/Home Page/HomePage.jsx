@@ -88,6 +88,7 @@ function HomePage() {
 
       {/* Registered Accounts */}
       <InfoListPreview 
+        setModalVisible={setUserModalVisible}
         listName={"Registered Accounts"}
         categoryBoxes={categoryBoxes}
         items={userAccounts}

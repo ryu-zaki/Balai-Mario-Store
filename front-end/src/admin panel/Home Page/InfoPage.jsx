@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoListPreview from './InfoListPreview';
 
-const InfoPage = ({categoryBoxes, listName, items, totalList, modalVisible, PageTable, InfoModal}) => {
+const InfoPage = ({categoryBoxes, listName, items, totalList, modalVisible, PageTable, InfoModal, setModalVisible}) => {
 
     return (
         <div>
@@ -24,6 +24,7 @@ const InfoPage = ({categoryBoxes, listName, items, totalList, modalVisible, Page
         </div>
 
         <InfoListPreview 
+          setModalVisible={setModalVisible}
           listName={listName} 
           items={items} 
           totalList={totalList} 

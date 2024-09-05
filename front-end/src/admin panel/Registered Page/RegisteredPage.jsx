@@ -20,6 +20,12 @@ export const userAccounts = [
   User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
   User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
   User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
+  User("Kenzo Shenel Vidal", "kenzo_09876@gmail.com", "active", "24 orders"),
 ]
 
 const RowData = ({data, setUserModalVisible}) => {
@@ -30,7 +36,7 @@ const RowData = ({data, setUserModalVisible}) => {
   }
 
   return (
-      <div className='relative -translate-x-10 opacity-0 row_data flex text-sm items-center justify-between border rounded-lg p-2 border-lightGray gap-3 py-3 sm:px-5 sm:pr-8 lg:grid lg:grid-cols-11'>
+      <div className='relative row_data flex text-sm items-center -translate-x-10 opacity-0 justify-between border rounded-lg p-2 border-lightGray gap-3 py-3 sm:px-5 sm:pr-8 lg:grid lg:grid-cols-11'>
           <div className='flex gap-3 items-center sm:gap-5 lg:col-span-3'>
               <div className='relative'>
                 <img className='w-10 rounded-full sm:w-14 md:w-10' src={kenzoIcon} alt='' />
@@ -48,10 +54,10 @@ const RowData = ({data, setUserModalVisible}) => {
 
 }
 
-export const PageTable = ({list}) => {
+export const PageTable = ({list, setModalVisible, animateTrigger}) => {
 
   return (
-    <div className='mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1'>
+    <div className={`${animateTrigger ? "animate" : "repeatAnimate"} mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1`}>
     <div className='hidden lg:grid grid-cols-11 border-2 border-lightGray p-4 rounded-md font-semibold text-gray text-sm px-6'>
       <span className='col-span-3'>Name</span>
       <span className='col-span-3'>Email Account</span>
@@ -62,7 +68,7 @@ export const PageTable = ({list}) => {
 
     {
       list.map((data, index) => {
-        return <RowData data={data} key={index} />
+        return <RowData setUserModalVisible={setModalVisible} data={data} key={index} />
       })
     }
     
@@ -88,6 +94,7 @@ function RegisteredPage() {
       items={userAccounts}
       totalList={200}
 
+      setModalVisible={setUserModalVisible}
       modalVisible={userModalVisible}
       PageTable={PageTable}
       InfoModal={<UserModal setUserModalVisible={setUserModalVisible}/>}

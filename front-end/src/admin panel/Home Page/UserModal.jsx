@@ -31,7 +31,7 @@ function UserModal({setUserModalVisible}) {
 
 const ShortInfo = ({setUserModalVisible, setViewFull}) => {
     return (
-        <div className={`${style["short_info--card"]} ${style["modal_card"]} modal_card flex flex-col gap-10 fixed w-11/12 rounded-xl  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-pureWhite z-50 pb-5 lg:gap-14`}>
+        <div className={`${style["short_info--card"]} ${style["modal_card"]} flex flex-col gap-10 fixed w-11/12 rounded-xl  top-1/2 left-1/2 bg-pureWhite z-50 pb-5 lg:gap-14`}>
           <div onClick={() => setUserModalVisible(false)} className='absolute z-10 p-1 top-2 right-2 cursor-pointer bg-pureWhite rounded-full lg:top-3 lg:right-3'><img width={15} src={crossIcon} alt='' /></div>
           
           <div className={`${style.full_cover} flex justify-center bg-lightGray relative h-32 mb-8 border-pureWhite border-2 rounded-tl-2xl rounded-tr-2xl lg:border-4 lg:h-40`}>
@@ -70,18 +70,18 @@ const ShortInfo = ({setUserModalVisible, setViewFull}) => {
 const FullInfo = ({setUserModalVisible, setViewFull}) => {
 
     return (
-        <div className={`${style["full_info--card"]} fixed w-11/12 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-pureWhite z-50 overflow-hidden rounded-xl flex flex-col gap-5`}>
+        <div className={`${style["full_info--card"]} ${style["modal_card"]} fixed w-11/12 top-1/2 left-1/2 bg-pureWhite z-50 overflow-hidden rounded-xl flex flex-col gap-5`}>
           
-          <div onClick={() => setViewFull(false)} className='absolute cursor-pointer z-10 p-1 top-2 right-2 bg-pureWhite rounded-full lg:top-3 lg:right-3'><img width={15} src={crossIcon} alt='' /></div>
+          <div onClick={() => setViewFull(false)} className='absolute cursor-pointer z-20 p-1 top-2 right-2 bg-pureWhite rounded-full lg:top-3 lg:right-3'><img width={15} src={crossIcon} alt='' /></div>
 
           <div className='flex flex-col gap-12 lg:gap-3'>
-            <div className='bg-lightGray h-20 border-2 border-pureWhite rounded-tr-xl rounded-tl-xl relative lg:h-28 lg:border-4'>
-             <div className={`${style.user_profile} absolute bottom-0 translate-y-1/2 left-5 lg:left-10`}>
+            <div className={`bg-lightGray z-10 h-20 border-2 border-pureWhite rounded-tr-xl rounded-tl-xl relative lg:h-28 lg:border-4`}>
+             <div className={`${style["user_profile--full_cover"]} ${style.user_profile} absolute bottom-0 left-5 lg:left-10`}>
                <img className='w-20 border-2 border-pureWhite rounded-full lg:w-32 lg:border-4' src={userIcon} alt='' />
              </div>
            </div>
 
-           <div className='pl-5 lg:pl-48'>
+           <div className='pl-5 -z-10 relative lg:pl-48'>
              <h2 className='text-lg font-semibold lg:text-3xl'>Jhonwell Espanola</h2>
              <p className="text-xs text-gray font-semibold lg:text-sm">jhonwellespanola4@gmail.com</p>
            </div>
